@@ -5,12 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} {{ __('Feed', 'flynt') }}" href="{{ site.rss2 | e('esc_url') }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
     {{ function('wp_head') }}
   </head>
   <body>
     {% block header %}
       {{ renderComponent('SiteHeader') }}
     {% endblock %}
+
+    {% block footer %}
+      {{ renderComponent('SiteFooter') }}
+    {% endblock %}
+    
     {{ function('wp_footer') }}
   </body>
 </html>

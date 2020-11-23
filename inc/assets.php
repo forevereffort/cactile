@@ -13,7 +13,7 @@ add_action('wp_enqueue_scripts', function () {
         'name' => 'Flynt/assets',
         'path' => 'assets/main.js',
         'type' => 'script',
-        'inFooter' => false,
+        'inFooter' => true,
     ]);
     wp_script_add_data('Flynt/assets', 'defer', true);
     $data = [

@@ -1,31 +1,27 @@
 <footer>
-    <div class="footer-main">
-        <div class="container">
-            <div class="footer-title">
-                <div class="footer-logo">
-                    <a href="{{ site.link }}"><img src="{{ footer_logo.src }}" alt="{{ footer_logo.alt }}"></a>
-                </div>
-                <h2>{{ footer_title|e('wp_kses_post') }}</h2>
-            </div>
+    <div class="container">
+        <div class="footer-inner">
             <div class="footer-row">
-                <div class="footer-col">
-                    {{ footer_widget_1 }}
+                <div class="footer-logo">
+                    <a href="{{ site.link }}"><img src="{{ logo.src }}" alt="{{ logo.alt }}"></a>
                 </div>
-                <div class="footer-col">
-                    {{ footer_widget_2 }}
-                </div>
-                <div class="footer-col">
-                    {{ footer_widget_3 }}
-                </div>
-                <div class="footer-col footer-col-last">
-                    {{ footer_widget_4 }}
-                </div>
+                <nav class="footer-nav">
+                    <ul>
+                        {% for item in menu.items %}
+                            <li class="{{ item.classes | join(' ') }}">
+                                <a href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
             </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            <p>{{ footer_copyright|e('wp_kses_post') }}</p>
+            <div class="footer-social-row">
+                {% for social in socials %}
+                    <div class="footer-social-item">
+                        <a href="{{ social.link }}"><img src="{{ social.src }}" alt="{{ social.alt }}"></a>
+                    </div>                        
+                {% endfor %}
+            </div>
         </div>
     </div>
 </footer>

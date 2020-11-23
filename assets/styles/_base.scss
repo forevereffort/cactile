@@ -1,19 +1,9 @@
-/**
-* 0.0 Root
-*
-* Top level styles every element should inherit.
-*/
-
-@include font-face('Montserrat', 'montserrat-v14-latin-regular', '400', 'normal');
-@include font-face('Montserrat', 'montserrat-v14-latin-italic', '400', 'italic');
-@include font-face('Montserrat', 'montserrat-v14-latin-700', '700', 'normal');
-@include font-face('Montserrat', 'montserrat-v14-latin-700italic', '700', 'italic');
-
 html {
   box-sizing: border-box;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Merriweather', serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  font-weight: $font-weight-light;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -24,4 +14,37 @@ html {
   *::after {
     box-sizing: inherit;
   }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: $font-weight-light;
+  line-height: 1.075;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: $font-weight-light;
+  line-height: 2.15;
+}
+
+p {
+  font-size: 16px;
+  font-weight: $font-weight-light;
+  line-height: 1.9375;
+}
+
+.container {
+  padding: 0 50px;
+  width: 100%;
 }

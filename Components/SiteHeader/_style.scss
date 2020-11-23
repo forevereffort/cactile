@@ -1,0 +1,24 @@
+.header-row {
+  border-bottom: 2px solid $green;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0 22px;
+}
+
+.header-nav {
+  padding-top: 11px;
+
+  ul {
+    display: flex;
+  }
+
+  li+li {
+    margin-left: 40px;
+  }
+
+  a {
+    color: $green-heavy;
+    font-size: 16px;
+    line-height: 1.9375;
+  }
+}

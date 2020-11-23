@@ -1,16 +1,18 @@
 <header>
   <div class="container">
-    <div class="header-logo">
-      <a href="{{ site.link }}"><img src="{{ logo.src }}" alt="{{ logo.alt }}"></a>
+    <div class="header-row">
+      <div class="header-logo">
+        <a href="{{ site.link }}"><img src="{{ logo.src }}" alt="{{ logo.alt }}"></a>
+      </div>
+      <nav class="header-nav">
+        <ul>
+          {% for item in menu.items %}
+            <li class="{{ item.classes | join(' ') }}">
+              <a href="{{ item.link }}">{{ item.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
     </div>
-    <nav class="header-nav">
-      <ul class="header-menu">
-        {% for item in menu.items %}
-          <li class="{{ item.classes | join(' ') }}">
-            <a class="header-menu-item" href="{{ item.link }}">{{ item.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
   </div>
 </header>
