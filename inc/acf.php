@@ -21,27 +21,29 @@ add_filter('http_response', function ($response, $args, $url) {
     return $response;
 }, 10, 3);
 
-add_filter('acf/fields/google_map/api', function ($api) {
-    $apiKey = Options::getGlobal('Acf', 'googleMapsApiKey');
-    if ($apiKey) {
-        $api['key'] = $apiKey;
-    }
-    return $api;
-});
-
-Options::addGlobal('Acf', [
+Options::addGlobal('FooterSocialLinks', [
     [
-        'name' => 'googleMapsTab',
-        'label' => __('Google Maps', 'flynt'),
-        'type' => 'tab'
+        'label' => 'Footer Facebook',
+        'name' => 'footer_facebook',
+        'type' => 'text',
+        'default_value' => '',
     ],
     [
-        'name' => 'googleMapsApiKey',
-        'label' => __('Google Maps Api Key', 'flynt'),
+        'label' => 'Footer Instagram',
+        'name' => 'footer_instagram',
         'type' => 'text',
-        'maxlength' => 100,
-        'prepend' => '',
-        'append' => '',
-        'placeholder' => ''
-    ]
+        'default_value' => '',
+    ],
+    [
+        'label' => 'Footer Amazon',
+        'name' => 'footer_amazon',
+        'type' => 'text',
+        'default_value' => '',
+    ],
+    [
+        'label' => 'Footer Pinterest',
+        'name' => 'footer_pinterest',
+        'type' => 'text',
+        'default_value' => '',
+    ],
 ]);

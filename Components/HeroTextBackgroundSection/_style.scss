@@ -1,0 +1,27 @@
+.hero-text-background-section {
+  padding-top: 50px;
+}
+
+.hero-text-background-inner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 227px 0 236px 103px;
+
+  .content-col {
+    max-width: 570px;
+  
+    h1 {
+      color: $green-black;
+    }
+  
+    p {
+      color: $green-heavy;
+      margin-top: 32px;
+    }
+  }
+  
+  .link-row {
+    margin-top: 39px;
+  }
+}

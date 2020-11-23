@@ -17,9 +17,11 @@
             </div>
             <div class="footer-social-row">
                 {% for social in socials %}
-                    <div class="footer-social-item">
-                        <a href="{{ social.link }}"><img src="{{ social.src }}" alt="{{ social.alt }}"></a>
-                    </div>                        
+                    {% if social.link %}
+                        <div class="footer-social-item">
+                            <a href="{{ social.link }}"><img src="{{ social.src }}" alt="{{ social.alt }}"></a>
+                        </div>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>

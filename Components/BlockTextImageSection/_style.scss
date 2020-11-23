@@ -1,0 +1,44 @@
+.block-text-image-section {
+  padding-top: 50px;
+}
+
+.block-text-image-row {
+  display: flex;
+  margin: 0 -25px;
+
+  .content-col {
+    padding: 0 25px;
+    width: 50%;
+  }
+
+  .content-col-inner {
+    background-color: $gray;
+    padding: 243px 103px 238px;
+
+    h2 {
+      color: $green-black;
+    }
+
+    p {
+      color: $green-heavy;
+      margin-top: 28px;
+    }
+
+    .link-row {
+      margin-top: 44px;
+    }
+  }
+  
+  .image-col {
+    padding: 0 25px;
+    width: 50%;
+  }
+
+  .image-col-inner {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+}

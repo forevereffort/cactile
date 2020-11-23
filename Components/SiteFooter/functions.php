@@ -23,22 +23,22 @@ add_filter('Flynt/addComponentData?name=SiteFooter', function ($data) {
         [
             'src' => Asset::requireUrl('Components/SiteFooter/Assets/social_facebook.svg'),
             'alt' => 'facebook',
-            'link' => 'facebook',
+            'link' => Options::getGlobal('FooterSocialLinks', 'footer_facebook'),
         ],
         [
             'src' => Asset::requireUrl('Components/SiteFooter/Assets/social_instagram.svg'),
             'alt' => 'instagram',
-            'link' => 'instagram',
+            'link' => Options::getGlobal('FooterSocialLinks', 'footer_instagram'),
         ],
         [
             'src' => Asset::requireUrl('Components/SiteFooter/Assets/social_amazon.svg'),
             'alt' => 'amazone',
-            'link' => 'amazone',
+            'link' => Options::getGlobal('FooterSocialLinks', 'footer_amazon'),
         ],
         [
             'src' => Asset::requireUrl('Components/SiteFooter/Assets/social_pinterest.svg'),
             'alt' => 'pinterest',
-            'link' => 'pinterest',
+            'link' => Options::getGlobal('FooterSocialLinks', 'footer_pinterest'),
         ]
     ];
 

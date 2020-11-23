@@ -29,22 +29,20 @@ a {
 h1 {
   font-size: 80px;
   font-weight: $font-weight-light;
-  line-height: 1.075;
+  line-height: 1.1125;
+  margin: 0;
 }
 
 h2 {
   font-size: 60px;
   font-weight: $font-weight-light;
-  line-height: 2.15;
+  line-height: 1.1125;
+  margin: 0;
 }
 
 p {
   font-size: 16px;
   font-weight: $font-weight-light;
   line-height: 1.9375;
-}
-
-.container {
-  padding: 0 50px;
-  width: 100%;
+  margin: 0;
 }

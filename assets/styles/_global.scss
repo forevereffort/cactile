@@ -1,0 +1,22 @@
+.container {
+  padding: 0 50px;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.55;
+  padding: 22px 66px 23px;
+}
+
+.btn-dark {
+  background-color: $green-black;
+  color: $gray;
+}
+
+.btn-default {
+  border: 2px solid $green;
+  color: $green;
+}
