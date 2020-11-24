@@ -1,12 +1,31 @@
 <section class="plant-category-section">
     <div class="container">
-        <div class="plant-category-row">
+        <div class="plant-category-row {% if row_reverse %} row-reverse {% endif %}">
             <div class="content-col">
                 <div class="content-col-inner">
-                    {{ content|e('wp_kses_post') }}
-                    <div class="link-row">
-                        <a class="btn btn-default" href="{{ link_url }}">{{ link_title }}</a>
+                    <div class="content-col-wrapper">
+                        {{ content|e('wp_kses_post') }}
+                        <div class="link-row">
+                            <a class="btn btn-default" href="{{ link_url }}">{{ link_title }}</a>
+                        </div>
                     </div>
+                </div>
+            </div>
+            <div class="plant-category-inner">
+                <div class="plant-category-inner-row">
+                    {% for plant in plants %}
+                        <div class="plant-category-col">
+                            <div class="plant-category-image" style="background-image: url('{{ plant.meta('image').src|resizeDynamic(420, 670) }}');"></div>
+                            <div class="plant-category-info">
+                                <div class="plant-category-info-title">
+                                    <h3>{{ plant.post_title|e }}</h3>
+                                </div>
+                                <div class="plant-category-info-price">
+                                    <span>{{ plant.price }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

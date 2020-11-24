@@ -1,0 +1,94 @@
+.plant-category-section {
+  padding-top: 50px;
+}
+
+.plant-category-row {
+  display: flex;
+  margin: 0 -25px;
+
+  .content-col {
+    padding: 0 25px;
+    width: 50%;
+  }
+    
+  .content-col-inner {
+    background-color: $gray;
+    padding: 180px 0 180px 103px;
+        
+    h2 {
+      color: $green-black;
+    }
+
+    p {
+      color: $green-heavy;
+      margin-top: 18px;
+    }
+  }
+
+  .link-row {
+    margin-top: 43px;
+  }
+
+  .content-col-wrapper {
+    max-width: 480px;
+  }
+    
+  &.row-reverse {
+    flex-direction: row-reverse;
+        
+    .content-col-inner {
+      background-color: $green-light;
+    }
+  }
+}
+
+.plant-category-inner {
+  padding: 0 25px;
+  width: 50%;
+}
+
+.plant-category-inner-row {
+  display: flex;
+  height: 100%;
+  margin: 0 -25px;
+}
+
+.plant-category-col {
+  height: 100%;
+  padding: 0 25px;
+  position: relative;
+  width: 50%;
+}
+
+.plant-category-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.plant-category-info {
+  align-items: center;
+  background-color: $white;
+  bottom: -6px;
+  display: flex;
+  justify-content: space-between;
+  left: 25px;
+  padding-top: 12px;
+  position: absolute;
+  right: 25px;
+}
+
+.plant-category-info-title {
+  h3 {
+    color: $green-black;
+  }
+}
+
+.plant-category-info-price {
+  span {
+    font-size: 16px;
+    font-weight: $font-weight-bold;
+    line-height: 1.9375;
+  }
+}
