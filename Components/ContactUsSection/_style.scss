@@ -1,0 +1,23 @@
+.contact-us-section {
+  padding-top: 50px;
+}
+
+.contact-us-row {
+  align-items: center;
+  background-color: $green-light;
+  display: flex;
+  justify-content: center;
+  padding: 170px 0;
+}
+
+.contact-us-title {
+  padding: 0 17px;
+    
+  h2 {
+    color: $green-black;
+  }
+}
+
+.contact-us-link {
+  padding: 0 17px;
+}
