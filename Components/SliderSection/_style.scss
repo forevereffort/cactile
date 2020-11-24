@@ -1,0 +1,48 @@
+.slider-section {
+  padding-top: 50px;
+}
+
+.plant-slider-buttons {
+  position: relative;
+}
+
+.plant-slider-prev {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.plant-slider-next {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.plant-slider-pagination {
+  margin-top: 24px;
+  text-align: center;
+
+  .swiper-pagination-bullet {
+    background-color: $green-black;
+    height: 12px;
+    opacity: 1;
+    transition: transform 0.2s;
+    width: 12px;
+
+    &.swiper-pagination-bullet-active {
+      transform: scale(1.833333);
+    }
+  }
+    
+  .swiper-pagination-bullet+.swiper-pagination-bullet {
+    margin-left: 20px;
+  }
+}
+
+.plant-slider-btn {
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}

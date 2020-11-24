@@ -93,6 +93,9 @@
     "extends": "eslint-config-standard",
     "rules": {
       "import/no-webpack-loader-syntax": 0
+    },
+    "env": {
+      "jquery": true
     }
   },
   "eslintIgnore": [

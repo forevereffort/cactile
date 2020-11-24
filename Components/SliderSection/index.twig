@@ -1,0 +1,18 @@
+<section class="slider-section">
+    <div class="container">
+        <div class="plant-slider-container swiper-container">
+            <div class="swiper-wrapper">
+                {% for row in images %}
+                    <div class="swiper-slide">
+                        <img src="{{ row.image.src|resizeDynamic(1820, 730) }}" alt="{{ row.image.alt }}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="plant-slider-buttons">
+            <div class="plant-slider-prev plant-slider-btn"><img src="{{ buttons.prev }}" alt="prev"></div>
+            <div class="plant-slider-next plant-slider-btn"><img src="{{ buttons.next }}" alt="next"></div>
+            <div class="plant-slider-pagination"></div>
+        </div>
+    </div>
+</section>
