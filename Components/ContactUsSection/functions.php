@@ -9,6 +9,12 @@ function getACFLayout()
         'label' => 'Contact Us Section',
         'sub_fields' => [
             [
+                'label' => 'Section ID',
+                'name' => 'section_id',
+                'type' => 'text',
+                'default_value' => '',
+            ],
+            [
                 'label' => 'Content',
                 'name' => 'content',
                 'type' => 'text',

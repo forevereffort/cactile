@@ -1,15 +1,18 @@
 .header-row {
   border-bottom: 2px solid $green;
-  display: flex;
-  justify-content: space-between;
-  padding: 50px 0 22px;
+  position: relative;
+}
+
+.header-logo {
+  left: 0;
+  position: absolute;
+  top: 50px;
 }
 
 .header-nav {
-  padding-top: 11px;
-
   ul {
     display: flex;
+    justify-content: flex-end;
   }
 
   li+li {
@@ -18,7 +21,27 @@
 
   a {
     color: $green-heavy;
+    display: inline-block;
     font-size: 16px;
     line-height: 1.9375;
+    padding: 61px 0 22px;
+    position: relative;
+
+    &::before {
+      background-color: $green-heavy;
+      content: '';
+      height: 6px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: -10px;
+      transition: top 0.2s;
+    }
+
+    &:hover {
+      &::before {
+        top: 0;
+      }
+    }
   }
 }

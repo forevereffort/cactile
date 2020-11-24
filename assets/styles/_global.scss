@@ -14,9 +14,20 @@
 .btn-dark {
   background-color: $green-black;
   color: $gray;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: darken($green-black, 15%);
+  }
 }
 
 .btn-default {
   border: 2px solid $green;
   color: $green;
+
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba($green-black, 0.1);
+  }
 }

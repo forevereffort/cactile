@@ -21,6 +21,12 @@ function getACFLayout()
         'label' => 'Slider Section',
         'sub_fields' => [
             [
+                'label' => 'Section ID',
+                'name' => 'section_id',
+                'type' => 'text',
+                'default_value' => '',
+            ],
+            [
                 'label' => 'Images',
                 'name' => 'images',
                 'type' => 'repeater',

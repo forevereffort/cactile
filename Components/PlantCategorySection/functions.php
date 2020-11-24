@@ -30,6 +30,12 @@ function getACFLayout()
         'label' => 'Plant Category Section',
         'sub_fields' => [
             [
+                'label' => 'Section ID',
+                'name' => 'section_id',
+                'type' => 'text',
+                'default_value' => '',
+            ],
+            [
                 'label' => 'Row Reverse',
                 'name' => 'row_reverse',
                 'type' => 'true_false'

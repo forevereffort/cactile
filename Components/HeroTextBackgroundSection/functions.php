@@ -9,6 +9,12 @@ function getACFLayout()
         'label' => 'Hero Text Background Section',
         'sub_fields' => [
             [
+                'label' => 'Section ID',
+                'name' => 'section_id',
+                'type' => 'text',
+                'default_value' => '',
+            ],
+            [
                 'label' => 'Image',
                 'name' => 'image',
                 'type' => 'image',

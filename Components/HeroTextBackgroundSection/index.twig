@@ -1,4 +1,4 @@
-<section class="hero-text-background-section">
+<section {% if section_id %} id="{{ section_id }}" {% endif %} class="hero-text-background-section">
     <div class="container">
         <div class="hero-text-background-inner" style="background-image: url('{{ image.src|resizeDynamic(2000) }}')">
             <div class="content-col">

@@ -28,6 +28,11 @@ footer {
     color: $gray;
     font-size: 16px;
     line-height: 1.25;
+    transition: color 0.2s;
+
+    &:hover {
+      color: darken($gray, 15%);
+    }
   }
 }
 
@@ -35,6 +40,16 @@ footer {
   display: flex;
   justify-content: center;
   margin-top: 46px;
+}
+
+.footer-social-item {
+  img {
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }
 
 .footer-social-item + .footer-social-item {
