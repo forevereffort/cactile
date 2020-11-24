@@ -45,3 +45,30 @@
     }
   }
 }
+
+
+@media (max-width : $mobile-break-point) {
+
+  .header-logo{
+    position: static;
+  }
+
+  .header-nav{
+    
+    ul{
+      display: block;
+    }
+
+    a{
+      padding: 0;
+
+      &::before{
+        display: none;
+      }
+    }
+
+    li+li{
+      margin-left: 0;
+    }
+  }
+}
