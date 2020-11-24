@@ -17,6 +17,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'layouts' => [
                     Components\HeroTextBackgroundSection\getACFLayout(),
                     Components\BlockTextImageSection\getACFLayout(),
+                    Components\PlantCategorySection\getACFLayout(),
                 ]
             ]
         ],
