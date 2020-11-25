@@ -31,3 +31,33 @@
     background-color: rgba($green-black, 0.1);
   }
 }
+
+.mobile-show {
+  display: none;
+}
+
+@media (max-width : $tablet-break-point) {
+  .btn {
+    font-size: 16px;
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width : $mobile-break-point) {
+  .mobile-hide {
+    display: none;
+  }
+
+  .mobile-show {
+    display: block;
+  }
+
+  .container {
+    padding: 0 25px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 15px 20px;
+  }
+}

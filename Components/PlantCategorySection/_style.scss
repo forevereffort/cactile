@@ -65,6 +65,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+
+  img {
+    display: none;
+    width: 100%;
+  }
 }
 
 .plant-category-info {
@@ -90,5 +95,77 @@
     font-size: 16px;
     font-weight: $font-weight-bold;
     line-height: 1.9375;
+  }
+}
+
+@media (max-width : $tablet-break-point) {
+  .plant-category-row {
+    .content-col-inner {
+      padding: 100px 50px;
+    }
+  }
+}
+
+@media (max-width : $mobile-break-point) {
+  .plant-category-section {
+    padding-top: 25px;
+
+    .container {
+      padding: 0;
+    }
+  }
+
+  .plant-category-row {
+    display: block;
+    margin: 0;
+
+    .content-col {
+      padding: 0;
+      width: 100%;
+    }
+
+    .content-col-inner {
+      padding: 65px 25px;
+    }
+
+    .link-row {
+      margin-top: 20px;
+    }
+  }
+
+  .plant-category-inner {
+    width: 100%;
+  }
+
+  .plant-category-inner-row {
+    display: block;
+    margin: 0;
+  }
+
+  .plant-category-col {
+    padding: 0;
+    width: 100%;
+  }
+
+  .plant-category-info {
+    position: static;
+  }
+
+  .plant-category-info-price {
+    span {
+      font-size: 14px;
+    }
+  }
+
+  .plant-category-image {
+    background-image: none !important;
+
+    img {
+      display: block;
+    }
+  }
+
+  .plant-category-col {
+    margin-top: 25px;
   }
 }

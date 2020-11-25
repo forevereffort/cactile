@@ -54,3 +54,31 @@ p {
   line-height: 1.9375;
   margin: 0;
 }
+
+@media (max-width : $tablet-break-point) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width : $mobile-break-point) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

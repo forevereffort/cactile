@@ -1,6 +1,8 @@
 <section {% if section_id %} id="{{ section_id }}" {% endif %} class="hero-text-background-section">
     <div class="container">
-        <div class="hero-text-background-inner" style="background-image: url('{{ image.src|resizeDynamic(2000) }}')">
+        <div class="hero-text-background-section-bkg mobile-hide" style="background-image: url('{{ image.src|resizeDynamic(2000) }}');"></div>
+        <div class="hero-text-background-section-bkg mobile-show" style="background-image: url('{{ mobile_image.src|resizeDynamic(1000) }}');"></div>
+        <div class="hero-text-background-inner">
             <div class="content-col">
                 {{ content|e('wp_kses_post') }}
                 <div class="link-row">

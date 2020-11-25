@@ -21,3 +21,25 @@
 .contact-us-link {
   padding: 0 17px;
 }
+
+@media (max-width : $tablet-break-point) {
+  .contact-us-row {
+    padding: 100px 0;
+  }
+}
+
+@media (max-width : $mobile-break-point) {
+  .contact-us-section {
+    padding-top: 25px;
+  }
+
+  .contact-us-row {
+    display: block;
+    padding: 65px 0;
+    text-align: center;
+  }
+
+  .contact-us-link {
+    margin-top: 20px;
+  }
+}

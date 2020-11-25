@@ -10,7 +10,25 @@
                 </div>
             </div>
             <div class="image-col">
-                <div class="image-col-inner" style="background-image: url('{{ image.src|resizeDynamic(1000) }}')"></div>
+                <div class="image-col-inner" style="background-image: url('{{ image.src|resizeDynamic(1000) }}')">
+                    {% if retina_image %}
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(image.width, image.height) }}"
+                            data-src="{{ image.src|resizeDynamic(image.width) }}"
+                            data-srcset="{{ image.src|resizeDynamic(image.width) }} 1x, {{ retina_image.src|resizeDynamic(retina_image.width) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ image.alt|e }}"
+                        >
+                    {% else %}
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(image.width, image.height) }}"
+                            data-src="{{ image.src|resizeDynamic(image.width) }}"
+                            alt="{{ image.alt|e }}"
+                        >
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>

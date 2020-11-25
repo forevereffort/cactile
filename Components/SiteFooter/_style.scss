@@ -55,3 +55,40 @@ footer {
 .footer-social-item + .footer-social-item {
   margin-left: 20px;
 }
+
+@media (max-width : $tablet-break-point) {
+  .footer-inner {
+    padding: 100px 0;
+  }
+}
+
+@media (max-width : $mobile-break-point) {
+  footer {
+    padding: 25px 0;
+  }
+
+  .footer-inner {
+    padding: 50px 0;
+  }
+
+  .footer-row {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-nav {
+    margin-left: 0;
+
+    ul {
+      display: block;
+    }
+
+    li {
+      margin-top: 20px;
+    }
+
+    li+li {
+      margin-left: 0;
+    }
+  }
+}

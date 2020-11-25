@@ -15,7 +15,25 @@
                 <div class="plant-category-inner-row">
                     {% for plant in plants %}
                         <div class="plant-category-col">
-                            <div class="plant-category-image" style="background-image: url('{{ plant.meta('image').src|resizeDynamic(420, 670) }}');"></div>
+                            <div class="plant-category-image" style="background-image: url('{{ plant.meta('image').src|resizeDynamic(420, 670) }}');">
+                                {% if plant.meta('image_retina') %}
+                                    <img
+                                        class="lazyload"
+                                        src="{{ placeholderImage(plant.meta('image').width, plant.meta('image').height) }}"
+                                        data-src="{{ plant.meta('image').src|resizeDynamic(plant.meta('image').width) }}"
+                                        data-srcset="{{ plant.meta('image').src|resizeDynamic(plant.meta('image').width) }} 1x, {{ plant.meta('image_retina').src|resizeDynamic(plant.meta('image_retina').width) }} 2x"
+                                        data-sizes="auto"
+                                        alt="{{ plant.meta('image').alt|e }}"
+                                    >
+                                {% else %}
+                                    <img
+                                        class="lazyload"
+                                        src="{{ placeholderImage(plant.meta('image').width, plant.meta('image').height) }}"
+                                        data-src="{{ plant.meta('image').src|resizeDynamic(plant.meta('image').width) }}"
+                                        alt="{{ plant.meta('image').alt|e }}"
+                                    >
+                                {% endif %}
+                            </div>
                             <div class="plant-category-info">
                                 <div class="plant-category-info-title">
                                     <h3>{{ plant.post_title|e }}</h3>

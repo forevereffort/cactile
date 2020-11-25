@@ -51,3 +51,15 @@
     transform: scale(1.2);
   }
 }
+
+.plant-slider-container {
+  img {
+    width: 100%;
+  }
+}
+
+@media (max-width : $mobile-break-point) {
+  .slider-section {
+    padding-top: 25px;
+  }
+}

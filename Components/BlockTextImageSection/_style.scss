@@ -32,6 +32,11 @@
   .image-col {
     padding: 0 25px;
     width: 50%;
+
+    img {
+      display: none;
+      width: 100%;
+    }
   }
 
   .image-col-inner {
@@ -40,5 +45,58 @@
     background-size: cover;
     height: 100%;
     width: 100%;
+  }
+}
+
+@media (max-width : $tablet-break-point) {
+  .block-text-image-row {
+    .content-col-inner {
+      padding: 100px 50px;
+    }
+  }
+}
+
+@media (max-width : $mobile-break-point) {
+  .block-text-image-section {
+    padding-top: 25px;
+
+    .container {
+      padding: 0;
+    }
+  }
+
+  .block-text-image-row {
+    display: block;
+    margin: 0;
+
+    .content-col {
+      padding: 0;
+      width: 100%;
+    }
+
+    .content-col-inner {
+      padding: 65px 25px;
+
+      p {
+        margin-top: 16px;
+      }
+
+      .link-row {
+        margin-top: 20px;
+      }
+    }
+
+    .image-col {
+      margin-top: 25px;
+      width: 100%;
+
+      img {
+        display: block;
+      }
+    }
+
+    .image-col-inner {
+      background-image: none !important;
+    }
   }
 }

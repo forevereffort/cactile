@@ -15,13 +15,28 @@ function getACFLayout()
                 'default_value' => '',
             ],
             [
-                'label' => 'Image',
+                'label' => 'Desktop Image',
                 'name' => 'image',
                 'type' => 'image',
                 'preview_size' => 'medium',
                 'instructions' => '',
                 'max_size' => 4,
                 'mime_types' => 'gif,jpg,jpeg,png',
+                'wrapper' => [
+                    'width' => '50'
+                ]
+            ],
+            [
+                'label' => 'Mobile Image',
+                'name' => 'mobile_image',
+                'type' => 'image',
+                'preview_size' => 'medium',
+                'instructions' => '',
+                'max_size' => 4,
+                'mime_types' => 'gif,jpg,jpeg,png',
+                'wrapper' => [
+                    'width' => '50'
+                ]
             ],
             [
                 'label' => 'Content',
