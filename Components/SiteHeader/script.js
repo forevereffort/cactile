@@ -1,4 +1,14 @@
 jQuery(document).ready(function () {
+  jQuery('.header-mobile-btn').click(function () {
+    if (jQuery(this).hasClass('is-active')) {
+      jQuery(this).removeClass('is-active')
+      jQuery('.header-nav').slideUp()
+    } else {
+      jQuery(this).addClass('is-active')
+      jQuery('.header-nav').slideDown()
+    }
+  })
+
   jQuery('.header-nav a').click(function () {
     const sectionId = jQuery(this).attr('data-section-id')
 
