@@ -4,7 +4,12 @@
             <div class="swiper-wrapper">
                 {% for row in images %}
                     <div class="swiper-slide">
-                        <img src="{{ row.image.src|resizeDynamic(1820, 730) }}" alt="{{ row.image.alt }}">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(1820, 730) }}"
+                            data-src="{{ row.image.src|resizeDynamic(1820, 730) }}"
+                            alt="{{ row.image.alt|e }}"
+                        >
                     </div>
                 {% endfor %}
             </div>
