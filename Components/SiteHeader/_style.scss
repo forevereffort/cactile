@@ -12,7 +12,7 @@
 .header-mobile-btn {
   bottom: 4px;
   cursor: pointer;
-  display: inline-block;
+  display: none;
   height: 18px;
   position: absolute;
   right: 0;
@@ -99,9 +99,19 @@
 }
 
 
+@media (min-width : $mobile-break-point) {
+  .header-nav {
+    display: block !important;
+  }
+}
+
 @media (max-width : $mobile-break-point) {
   .header-row {
     padding: 25px 0;
+  }
+
+  .header-mobile-btn {
+    display: inline-block;
   }
 
   .header-logo {

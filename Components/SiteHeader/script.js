@@ -10,6 +10,11 @@ jQuery(document).ready(function () {
   })
 
   jQuery('.header-nav a').click(function () {
+    if (jQuery('.header-mobile-btn').hasClass('is-active')) {
+      jQuery('.header-mobile-btn').removeClass('is-active')
+      jQuery('.header-nav').hide()
+    }
+
     const sectionId = jQuery(this).attr('data-section-id')
 
     if (jQuery(`${sectionId}`).length > 0) {
